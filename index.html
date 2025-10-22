@@ -4,270 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog: Paloma Urbana</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="IMG/paloma-icono.png" type="image/x-icon">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #2c3e50 0%, #4a6580 100%);
-      color: #fff;
-      padding: 3rem 1.5rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
-      position: relative;
-      color: #fff;
-      text-shadow: 0 0 8px rgba(0,0,0,0.6);
-      -webkit-text-stroke: 1px rgba(255,255,255,0.2);
-      letter-spacing: 2px;
-    }
-    
-    header p {
-      font-size: 1.3rem;
-      margin-top: 0.8rem;
-      font-style: italic;
-      opacity: 0.9;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-    
-    .github-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.15);
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      margin-top: 1.5rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .github-btn:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    
-    .blog-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    
-    .article-content {
-      flex: 2;
-      min-width: 300px;
-    }
-    
-    .pigeon-showcase {
-      flex: 1;
-      min-width: 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .pigeon-frame {
-      width: 100%;
-      max-width: 300px;
-      background: white;
-      padding: 1rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .pigeon-frame img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-    
-    .pigeon-frame img:hover {
-      transform: scale(1.03);
-    }
-    
-    .pigeon-frame h3 {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-    
-    .pigeon-frame p {
-      color: #666;
-      font-size: 0.9rem;
-    }
-    
-    article {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 15px;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
-    
-    article h2 {
-      color: #2c3e50;
-      margin-bottom: 1.2rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #eaeaea;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    article h2 i {
-      color: #3498db;
-    }
-    
-    article p {
-      margin-bottom: 1.2rem;
-      line-height: 1.8;
-    }
-    
-    .article-meta {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #f8f9fa;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      color: #2c3e50;
-    }
-    
-    .authors {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-    
-    .author {
-      text-align: center;
-      flex: 1;
-      background: #fff;
-      border-radius: 15px;
-      padding: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      min-width: 250px;
-      transition: transform 0.3s ease;
-    }
-    
-    .author:hover {
-      transform: translateY(-5px);
-    }
-    
-    .author img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #3498db;
-    }
-    
-    .author h3 {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-    
-    .author p {
-      color: #7f8c8d;
-      margin-bottom: 0.5rem;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #2c3e50;
-      color: #fff;
-      margin-top: 3rem;
-      border-radius: 15px 15px 0 0;
-      position: relative;
-    }
-    
-    .footer-github {
-      margin-bottom: 1rem;
-    }
-    
-    .copyright {
-      margin-top: 1rem;
-      color: #bdc3c7;
-      font-size: 0.9rem;
-    }
-    
-    @media (max-width: 768px) {
-      .blog-content {
-        flex-direction: column;
-      }
-      
-      .pigeon-showcase {
-        order: -1;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-      }
-      
-      .pigeon-frame {
-        max-width: 250px;
-      }
-      
-      header h1 {
-        font-size: 2.2rem;
-      }
-      
-      header p {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>Naturaleza Urbana</h1>
     <p>Un blog para ver lo extraordinario en lo cotidiano</p>
+
+    <div id="theme-toggle" class="theme-switch" title="Cambiar tema">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </div>
   </header>
 
   <main>
@@ -309,25 +60,11 @@
             </div>
           </div>
         </article>
-        
-        <h2>Autores</h2>
-        <div class="authors">
-          <div class="author">
-            <img src="IMG/Avatar2.jpeg" alt="Autor 1">
-            <h3>Ignacio Herrera</h3>
-            <p>Editor de la página</p>
-          </div>
-          <div class="author">
-            <img src="IMG/Avatar1.jpeg" alt="Autor 2">
-            <h3>Evan Barrera</h3>
-            <p>Fotógrafo</p>
-          </div>
-        </div>
       </div>
       
       <div class="pigeon-showcase">
         <div class="pigeon-frame">
-          <img src="IMG/Paloma.jpeg" alt="Foto de una paloma urbana">
+          <img src="IMG/ANIMALES/Paloma.jpeg" alt="Foto de una paloma urbana">
           <h3>Paloma Urbana</h3>
           <p>Fotografía tomada en UPIICSA</p>
         </div>
@@ -339,7 +76,84 @@
           <p><i class="fas fa-check-circle" style="color: #3498db;"></i> Reconocen rostros humanos</p>
         </div>
       </div>
+    </div> 
+    
+    <h2 class="section-title"><i class="fas fa-users"></i> Conoce al Equipo</h2>
+    <div class="authors">
+      <div class="author">
+        <img src="IMG/Avatar2.jpeg" alt="Avatar de Ignacio">
+        <h3>Ignacio Herrera</h3>
+        <p>Desarrollador Web</p>
+      </div>
+      <div class="author">
+        <img src="IMG/Avatar1.jpeg" alt="Avatar de Evan">
+        <h3>Evan Barrera</h3>
+        <p>Desarrollador Web</p>
+      </div>
+      <div class="author">
+        <img src="IMG/Avatar3.jpeg" alt="Avatar de Alvaro">
+        <h3>Alvaro Zapatero</h3>
+        <p>Fotógrafo</p>
+      </div>
+      <div class="author">
+        <img src="IMG/Avatar4.jpeg" alt="Avatar de Shantiel">
+        <h3>Shantiel Cordero</h3>
+        <p>Fotógrafa</p>
+      </div>
+      <div class="author">
+        <img src="IMG/Avatar5.jpeg" alt="Avatar de Silvana">
+        <h3>Silvana Salas</h3>
+        <p>Fotógrafa</p>
+      </div>
     </div>
+
+    
+    <section class="about-us-hero">
+      <div class="hero-content">
+        <h2>Nuestro Lente, Nuestra Visión</h2>
+        <p>Juntos, exploramos y capturamos la esencia de la vida urbana, revelando la belleza en cada rincón.</p>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="IMG/foto-grupal.jpeg" alt="Equipo de Paloma Urbana trabajando" class="hero-image">
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2 class="section-title"><i class="fas fa-images"></i> Galería Urbana: Momentos Capturados</h2>
+      <div class="gallery-grid">
+        
+        <figure class="gallery-item tall">
+          <img src="IMG/ANIMALES/foto2.jpeg" alt="Persona con gato en el suelo">
+          <figcaption>Foto por: Shantiel Cordero</figcaption>
+        </figure>
+        <figure class="gallery-item wide">
+          <img src="IMG/ANIMALES/foto1.jpeg" alt="Perro asomándose en ventanilla">
+          <figcaption>Foto por: Alvaro Zapatero</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="IMG/ANIMALES/foto4.jpeg" alt="Paloma blanca posando">
+          <figcaption>Foto por: Alvaro Zapatero</figcaption>
+        </figure>
+        
+        <div class="gallery-item promo-box wide">
+          <p>"La universidad está llena de historias. Cada esquina cuenta algo nuevo."</p>
+        </div>
+
+        <figure class="gallery-item">
+          <img src="IMG/ANIMALES/foto3.jpeg" alt="Perro dormido en un estante">
+          <figcaption>Foto por: Silvana Salas</figcaption>
+        </figure>
+        <figure class="gallery-item wide">
+          <img src="IMG/ANIMALES/foto5.jpeg" alt="Reflejo de edificios en ventana" style="object-position: bottom;">
+          <figcaption>Foto por: Shantiel Cordero</figcaption>
+        </figure>
+        <figure class="gallery-item wide">
+          <img src="IMG/ANIMALES/foto6.jpeg" alt="Perro corriendo en el pasto">
+          <figcaption>Foto por: Silvana Salas</figcaption>
+        </figure>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -352,5 +166,83 @@
       <p>© 2025 Paloma Urbana. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { // Usamos DOMContentLoaded para asegurar que el DOM está listo
+    
+      // --- Lógica para el Dark Mode Toggle ---
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      const applyTheme = (theme) => {
+        if (theme === 'dark') {
+          body.classList.add('dark-mode');
+        } else {
+          body.classList.remove('dark-mode');
+        }
+      };
+
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      applyTheme(savedTheme);
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+          localStorage.removeItem('theme'); // Mejor remover para que 'light' sea el default
+        }
+      });
+
+      // --- Lógica del Lightbox (Modal) ---
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const closeBtn = document.querySelector('.lightbox-close');
+      
+      // Selecciona todas las imágenes DENTRO de un .gallery-item que NO sea .promo-box
+      const galleryImages = document.querySelectorAll('.gallery-item:not(.promo-box) img');
+      
+      galleryImages.forEach(img => {
+        img.style.cursor = 'pointer'; // Añade el cursor de puntero para indicar que es clickeable
+        
+        img.addEventListener('click', () => {
+          const figcaption = img.nextElementSibling; // El <figcaption> es hermano de <img>
+          
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          // Muestra el caption si existe
+          if (figcaption) {
+              lightboxCaption.innerHTML = figcaption.innerHTML;
+          } else {
+              lightboxCaption.innerHTML = ""; // Si no hay caption, lo deja vacío
+          }
+        });
+      });
+      
+      // Función para cerrar el modal
+      const closeModal = () => {
+        lightbox.style.display = 'none';
+      }
+      
+      // Cerrar al hacer clic en la 'x'
+      closeBtn.addEventListener('click', closeModal);
+      
+      // Cerrar al hacer clic fuera de la imagen (en el fondo oscuro del modal)
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) { // Solo si se hace clic en el fondo oscuro
+          closeModal();
+        }
+      });
+
+    }); // Cierre de DOMContentLoaded
+  </script>
 </body>
 </html>
